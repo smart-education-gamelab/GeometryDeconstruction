@@ -64,7 +64,7 @@ public static class Constants
     public static Color CORRECTRGB = new Color(0, 0.5f, 0);
     public static Color TEXTRGB = new Color(1, 1, 1);
 
-    //Variables for formula creation
+    //Variables for formula creation, THESE ARE CURRENTLY NOT USED
     public static string LENGTH = "l";
     public static string WIDTH = "w";
     public static string HEIGHT = "h";

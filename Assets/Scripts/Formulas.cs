@@ -123,50 +123,39 @@ public static class Formulas
         {
             case Shape3D.Cube:
                 formula = "lll";
-                formula = LENGTH + CUBED;
                 break;
             case Shape3D.Cuboid:
                 formula = "lwh";
-                formula = LENGTH + WIDTH + HEIGHT;
                 break;
             case Shape3D.Cylinder:
                 formula = "πr^2h";
-                formula = PI + RADIUS + SQUARED + HEIGHT;
                 break;
             case Shape3D.Sphere:
                 formula = "4/3πr^3";
-                formula = FOURTHIRDS + PI + RADIUS + CUBED;
                 break;
             case Shape3D.Cone:
                 formula = "1/3πr^3";
-                formula = ONETHIRDS + PI + RADIUS + CUBED;
                 break;
             case Shape3D.TriangularPrism:
                 formula = "1/2lwh";
-                formula = HALF + LENGTH + WIDTH + HEIGHT;
                 break;
             case Shape3D.RectangularPrism:
                 formula = "lwh";
-                formula = LENGTH + WIDTH + HEIGHT;
                 break;
             case Shape3D.SquarePyramid:
                 formula = "1/3l^2h";
-                formula = ONETHIRDS + LENGTH + SQUARED + HEIGHT;
                 break;
             case Shape3D.RectanglePyramid:
                 formula = "1/3lwh";
-                formula = ONETHIRDS + LENGTH + WIDTH + HEIGHT;
                 break;
             case Shape3D.TrianglePyramid:
                 formula = "1/6l^3/√2";
-                formula = ONESIXTH + LENGTH + CUBED + ROOTTWO;
                 break;
             case Shape3D.PentagonalPyramid:
                 formula = "2(1+√2)/3l^2h";
                 break;
             case Shape3D.HexagonalPyramid:
                 formula = "√3/2l^2h";
-                formula = ROOTTHREE + DIVISION + "2" + LENGTH + CUBED + HEIGHT;
                 break;
             default:
                 break;

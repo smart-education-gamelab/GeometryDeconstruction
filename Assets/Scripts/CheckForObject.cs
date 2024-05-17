@@ -15,6 +15,7 @@ public class CheckForObject : MonoBehaviour
     [Tooltip("The dropdown script")]
     public Dropdown dropdown;
 
+	//TODO Make an audio manager when using more sounds
     private AudioSource audioSource;
     private AudioClip audioClip;
 
@@ -22,10 +23,12 @@ public class CheckForObject : MonoBehaviour
     {
         //Find dropdown
         dropdown = Camera.main.GetComponent<Dropdown>();
-        audioSource = Camera.main.GetComponent<AudioSource>();
+        
+		//Get the audiosource and clip
+		audioSource = Camera.main.GetComponent<AudioSource>();
         audioClip = audioSource.clip;
 
-        RefreshObject();
+        SpawnObject();
     }
 
     /// <summary>
@@ -45,13 +48,18 @@ public class CheckForObject : MonoBehaviour
 
         //Play music
         audioSource.PlayOneShot(audioClip);
-
-        //Spawn new object
+        
+        SpawnObject();
+    }
+	
+	private void SpawnObject()
+	{
+		//Spawn new object
         GameObject prefab = prefabs[Random.Range(0, prefabs.Count)];
         currentObject = Instantiate(prefab, transform);
         currentObjectInfo = currentObject.GetComponent<ObjectInfo>();
-    }
-
+	}
+		
     /// <summary>
     /// Returns the index of the dropdown menu
     /// </summary>
