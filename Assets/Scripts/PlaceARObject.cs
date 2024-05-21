@@ -1,13 +1,11 @@
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using EnhancedTouch = UnityEngine.InputSystem.EnhancedTouch;
 
 [RequireComponent(typeof(ARRaycastManager), typeof(ARPlaneManager))]
-public class PlaceObject : MonoBehaviour
+public class PlaceARObject : MonoBehaviour
 {
     [SerializeField]
     private GameObject prefab;
