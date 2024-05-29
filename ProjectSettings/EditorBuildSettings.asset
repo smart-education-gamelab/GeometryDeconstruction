@@ -9,19 +9,19 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 68899376d076d984689c3ea98863eb39
   - enabled: 0
-    path: Assets/Scenes/BlankAR.unity
+    path: Assets/Scenes/Test/BlankAR.unity
     guid: 6bdce89659816455b9f906fc62d19910
   - enabled: 0
-    path: Assets/Scenes/Default.unity
+    path: Assets/Scenes/Test/Default.unity
     guid: c540a110968a7af4ea7afb48261818c8
   - enabled: 0
-    path: Assets/Scenes/MarkerAR.unity
+    path: Assets/Scenes/Test/MarkerAR.unity
     guid: 84ba54a687f7ace41aca1ac3ee3f6877
   - enabled: 0
-    path: Assets/Scenes/NewOrigin.unity
+    path: Assets/Scenes/Test/NewOrigin.unity
     guid: 5f1950335b236f0479d0d06c7dd09278
   - enabled: 1
-    path: Assets/Scenes/ModelARTest.unity
+    path: Assets/Scenes/ARDeconstruction.unity
     guid: e565e171ecb0faa4d992678325a57054
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,

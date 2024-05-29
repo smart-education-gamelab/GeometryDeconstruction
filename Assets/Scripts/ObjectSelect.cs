@@ -70,7 +70,7 @@ public class ObjectSelect : MonoBehaviour, IPointerClickHandler
             IsCorrect = false;
         }
     }
-    
+
     /*
     private void OnMouseDown()
     {
@@ -87,7 +87,7 @@ public class ObjectSelect : MonoBehaviour, IPointerClickHandler
             IsCorrect = false;
         }
     }*/
-	
+
     /// <summary>
     /// Reset the color back to its original or when incorrect to the incorrect color
     /// </summary>

@@ -9,11 +9,23 @@ public class MenuControls : MonoBehaviour
     public GameObject tutorialObjects;
     public GameObject settingsObjects;
     public GameObject informationObjects;
+    public GameObject difficultyObjects;
 
     #region buttoncontrols
     public void OpenGame()
     {
-        SceneManager.LoadScene("ModelARTest");
+        SceneManager.LoadScene("ARDeconstruction");
+    }
+    public void OpenSelectDifficulty()
+    {
+        buttonObjects.SetActive(false);
+        difficultyObjects.SetActive(true);
+    }
+
+    public void CloseSelectDifficulty()
+    {
+        buttonObjects.SetActive(true);
+        difficultyObjects.SetActive(false);
     }
 
     public void OpenSettings()

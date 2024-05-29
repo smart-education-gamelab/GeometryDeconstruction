@@ -11,6 +11,8 @@ public class MainManager : MonoBehaviour
     public Color incorrectTextColor = new Color(1, 1, 1);
     public Color correctTextColor = new Color(1, 1, 1);
 
+    public int difficultylevel = 0;
+
     private void Awake()
     {
         if(Instance != null)

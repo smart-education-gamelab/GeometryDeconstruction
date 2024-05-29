@@ -21,9 +21,11 @@ public class CheckForObject : MonoBehaviour
     [SerializeField][Tooltip("List of level 4 prefabs")]
     private List<GameObject> level4;
 
-    private List<GameObject> prefabList;
+    [SerializeField]
+    private List<GameObject> prefabList = new List<GameObject>();
 
     private int difficultylevel = 0;
+    private int listIndex = -1;
 
     private GameObject currentObject;
     private ObjectInfo currentObjectInfo;
@@ -44,6 +46,8 @@ public class CheckForObject : MonoBehaviour
 		audioSource = Camera.main.GetComponent<AudioSource>();
         audioClip = audioSource.clip;
 
+        difficultylevel = MainManager.Instance.difficultylevel;
+
         UpdatePrefabList();
         SpawnObject();
     }
@@ -61,7 +65,7 @@ public class CheckForObject : MonoBehaviour
     /// </summary>
     public void RefreshObject()
     {
-        prefabList.Remove(currentObject);
+        prefabList.RemoveAt(listIndex);
         if(prefabList.Count == 0)
         {
             difficultylevel++;
@@ -86,7 +90,8 @@ public class CheckForObject : MonoBehaviour
 
     private GameObject GetObject()
     {
-        GameObject tempprefab = prefabList[Random.Range(0, prefabList.Count)];
+        listIndex = Random.Range(0, prefabList.Count);
+        GameObject tempprefab = prefabList[listIndex];
 
         return tempprefab;
     }
@@ -97,28 +102,31 @@ public class CheckForObject : MonoBehaviour
 
         switch (difficultylevel)
         {
-            //level 1 only
             case 0:
+                Debug.LogError("Difficulty wasn't selected");
+                break;
+            //level 1 only
+            case 1:
                 prefabList.AddRange(level1);
                 break;
             //level 1 & 2
-            case 1:
+            case 2:
                 prefabList.AddRange(level1);
                 prefabList.AddRange(level2);
                 break;
             //level 2 & 3
-            case 2:
+            case 3:
                 prefabList.AddRange(level2);
                 prefabList.AddRange(level3);
                 break;
             //level 3 & 4
-            case 3:
+            case 4:
                 prefabList.AddRange(level3);
                 prefabList.AddRange(level4);
                 break;
-            case 4:
+            case 5:
                 //Loop the current hardest difficulty
-                difficultylevel = 3;
+                difficultylevel = 4;
                 break;
             default:
                 Debug.LogError("Not a valid difficulty level");
