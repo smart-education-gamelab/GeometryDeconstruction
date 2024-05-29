@@ -82,7 +82,6 @@ public class CheckForObject : MonoBehaviour
 	private void SpawnObject()
 	{
 		//Spawn new object
-        //GameObject prefab = prefabs[Random.Range(0, prefabs.Count)];
         GameObject prefab = GetObject();
         currentObject = Instantiate(prefab, transform);
         currentObjectInfo = currentObject.GetComponent<ObjectInfo>();
