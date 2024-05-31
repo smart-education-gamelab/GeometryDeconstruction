@@ -28,6 +28,8 @@ public class PlaceARObject : MonoBehaviour
 
     private bool PlacedObject = false;
 
+    public GameObject obj;
+
     private void Awake()
     {
         aRRaycastManager = GetComponent<ARRaycastManager>();
@@ -63,7 +65,7 @@ public class PlaceARObject : MonoBehaviour
             foreach (ARRaycastHit hit in hits)
             {
                 Pose pose = hit.pose;
-                GameObject obj = Instantiate(prefab, pose.position, pose.rotation);
+                obj = Instantiate(prefab, pose.position, pose.rotation);
 
                 if (aRPlaneManager.GetPlane(hit.trackableId).alignment == PlaneAlignment.HorizontalUp)
                 {

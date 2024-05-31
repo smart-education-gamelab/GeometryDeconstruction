@@ -66,16 +66,31 @@ public class CheckForObject : MonoBehaviour
     public void RefreshObject()
     {
         prefabList.RemoveAt(listIndex);
-        if(prefabList.Count == 0)
-        {
-            difficultylevel++;
-            UpdatePrefabList();
-        }
+
         Destroy(currentObject);
 
         //Play music
         audioSource.PlayOneShot(audioClip);
-        
+
+        if (prefabList.Count == 0)
+        {
+            //Spawn buttons
+            Camera.main.GetComponent<DifficultySelector>().OpenDifficulty();
+            return;
+        }
+
+        SpawnObject();
+    }
+
+    public void UpdateDifficulty(bool IncreasingDifficulty)
+    {
+        if (IncreasingDifficulty)
+        {
+            difficultylevel++;
+        }
+
+        UpdatePrefabList();
+
         SpawnObject();
     }
 	
