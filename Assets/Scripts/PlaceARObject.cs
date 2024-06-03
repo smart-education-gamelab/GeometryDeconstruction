@@ -48,7 +48,7 @@ public class PlaceARObject : MonoBehaviour
         EnhancedTouch.Touch.onFingerDown += FingerDown;
     }
 
-    private void onDisable()
+    private void OnDisable()
     {
         EnhancedTouch.TouchSimulation.Disable();
         EnhancedTouch.EnhancedTouchSupport.Disable();
@@ -96,5 +96,10 @@ public class PlaceARObject : MonoBehaviour
             }
 
         }
+    }
+
+    public void DeleteObject()
+    {
+        Destroy(obj);
     }
 }

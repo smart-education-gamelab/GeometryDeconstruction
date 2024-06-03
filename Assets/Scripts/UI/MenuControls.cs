@@ -71,7 +71,7 @@ public class MenuControls : MonoBehaviour
 
     public void ReturnMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
     #endregion
 
