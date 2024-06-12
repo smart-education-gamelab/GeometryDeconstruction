@@ -71,7 +71,8 @@ public class ObjectSelect : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    /*
+    // DEVELOPER ONLY
+    // Use mouse on PC to select surfaces of objects
     private void OnMouseDown()
     {
         IsSelected = !IsSelected;
@@ -86,7 +87,7 @@ public class ObjectSelect : MonoBehaviour, IPointerClickHandler
 			floatingHint.UpdateText("");
             IsCorrect = false;
         }
-    }*/
+    }
 
     /// <summary>
     /// Reset the color back to its original or when incorrect to the incorrect color

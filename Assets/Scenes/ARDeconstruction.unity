@@ -1839,6 +1839,7 @@ GameObject:
   - component: {fileID: 1659859601}
   - component: {fileID: 1659859600}
   - component: {fileID: 1659859603}
+  - component: {fileID: 1659859604}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -1937,6 +1938,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AnchorPrefab: {fileID: 3107616305198247769, guid: b59dc24d4cad21140874623b8689c972,
     type: 3}
+--- !u!81 &1659859604
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659859597}
+  m_Enabled: 1
 --- !u!1 &1829304852
 GameObject:
   m_ObjectHideFlags: 0
