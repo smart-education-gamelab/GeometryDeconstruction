@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using EnhancedTouch = UnityEngine.InputSystem.EnhancedTouch;
@@ -27,6 +28,7 @@ public class PlaceARObject : MonoBehaviour
     private List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
     private bool PlacedObject = false;
+    private bool touchSimIsActive = true;
 
     public GameObject obj;
 
@@ -46,6 +48,7 @@ public class PlaceARObject : MonoBehaviour
         EnhancedTouch.TouchSimulation.Enable();
         EnhancedTouch.EnhancedTouchSupport.Enable();
         EnhancedTouch.Touch.onFingerDown += FingerDown;
+        touchSimIsActive = true;
     }
 
     private void OnDisable()
@@ -53,6 +56,13 @@ public class PlaceARObject : MonoBehaviour
         EnhancedTouch.TouchSimulation.Disable();
         EnhancedTouch.EnhancedTouchSupport.Disable();
         EnhancedTouch.Touch.onFingerDown -= FingerDown;
+        touchSimIsActive = false;
+    }
+
+    private void Update()
+    {
+        if (SystemInfo.deviceType == DeviceType.Desktop)
+            ChangeTouchInputPC();
     }
 
     private void FingerDown(EnhancedTouch.Finger finger)
@@ -101,5 +111,24 @@ public class PlaceARObject : MonoBehaviour
     public void DeleteObject()
     {
         Destroy(obj);
+    }
+
+    // DEVELOPER INPUT ONLY
+    // Enables or disables touch simulation on PC to not conflict with AR simulation
+    private void ChangeTouchInputPC()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+            if (touchSimIsActive)
+            {
+                EnhancedTouch.TouchSimulation.Disable();
+                touchSimIsActive = false;
+                Debug.Log("Disable");
+            }
+            else
+            {
+                EnhancedTouch.TouchSimulation.Enable();
+                touchSimIsActive = true;
+                Debug.Log("Enable");
+            }
     }
 }
