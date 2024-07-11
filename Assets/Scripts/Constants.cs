@@ -16,6 +16,8 @@ public static class Constants
         Parallelogram,
         Pentagon,
         Hexagon,
+        LateralSurfaceCylinder,
+        LateralSurfaceCone,
         Cube,
         Cuboid,
         Cylinder,
@@ -40,7 +42,9 @@ public static class Constants
         Rhombus,
         Parallelogram,
         Pentagon,
-        Hexagon
+        Hexagon,
+        LateralSurfaceCylinder,
+        LateralSurfaceCone
     }
 
     public enum Shape3D

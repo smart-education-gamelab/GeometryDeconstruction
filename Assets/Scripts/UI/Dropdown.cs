@@ -33,8 +33,8 @@ public class Dropdown : MonoBehaviour
 
         for (int i = 0; i < formulas.Count; i++)
         {
-            shapes.Add(new Shapes((Shape)i+1, formulas[i].ToUpper(), i+1));
-            formulas[i] = shapes[i].GetFormula().ToUpper();
+            shapes.Add(new Shapes((Shape)i+1, formulas[i].ToLower(), i+1));
+            formulas[i] = shapes[i].GetFormula().ToLower();
             shapeNum.Add(shapes[i].GetIndex());
         }
         PopulateDropdown();

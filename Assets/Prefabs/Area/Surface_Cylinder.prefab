@@ -2044,7 +2044,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sides: []
   IsVolume: 0
-  shape: 2
+  shape: 10
 --- !u!114 &3228612202668875822
 MonoBehaviour:
   m_ObjectHideFlags: 0

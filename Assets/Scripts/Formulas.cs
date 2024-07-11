@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using static Constants;
 
 public static class Formulas
@@ -42,6 +43,12 @@ public static class Formulas
                 break;
             case Shape.Hexagon:
                 if (formula.Equals(CheckFormula(Shape2D.Hexagon))) { result = true; }
+                break;
+            case Shape.LateralSurfaceCylinder:
+                if (formula.Equals(CheckFormula(Shape2D.LateralSurfaceCylinder))) { result = true; }
+                break;
+            case Shape.LateralSurfaceCone:
+                if (formula.Equals(CheckFormula(Shape2D.LateralSurfaceCone))) { result = true; }
                 break;
             case Shape.Cube:
                 break;
@@ -108,6 +115,12 @@ public static class Formulas
                 break;
             case Shape2D.Hexagon:
                 formula = "1/2wh6";
+                break;
+            case Shape2D.LateralSurfaceCylinder:
+                formula = "2πrh";
+                break;
+            case Shape2D.LateralSurfaceCone:
+                formula = "πrs";
                 break;
             default:
                 break;
