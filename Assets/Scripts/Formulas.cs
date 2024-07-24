@@ -26,7 +26,8 @@ public static class Formulas
                     formula.Equals(CheckFormula(Shape2D.Parallelogram))) { result = true; }
                 break;
             case Shape.Triangle:
-                if (formula.Equals(CheckFormula(Shape2D.Triangle))) { result = true; }
+                if (formula.Equals(CheckFormula(Shape2D.Triangle)) || 
+                    formula.Equals(CheckFormula(Shape2D.PyramidSideTriangle))) { result = true; }
                 break;
             case Shape.Circle:
                 if (formula.Equals(CheckFormula(Shape2D.Circle))) { result = true; }
@@ -121,6 +122,9 @@ public static class Formulas
                 break;
             case Shape2D.LateralSurfaceCone:
                 formula = "πrs";
+                break;
+            case Shape2D.PyramidSideTriangle:
+                formula = "1/2ws";
                 break;
             default:
                 break;

@@ -18,6 +18,7 @@ public static class Constants
         Hexagon,
         LateralSurfaceCylinder,
         LateralSurfaceCone,
+        PyramidSideTriangle,
         Cube,
         Cuboid,
         Cylinder,
@@ -44,7 +45,8 @@ public static class Constants
         Pentagon,
         Hexagon,
         LateralSurfaceCylinder,
-        LateralSurfaceCone
+        LateralSurfaceCone,
+        PyramidSideTriangle
     }
 
     public enum Shape3D
