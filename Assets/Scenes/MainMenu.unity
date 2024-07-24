@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1690,6 +1690,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuControls: {fileID: 552138061}
+  placeAR: {fileID: 0}
+  difficultyButtons: {fileID: 0}
 --- !u!224 &306040380
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6380,35 +6382,52 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2109800023}
     m_Modifications:
-    - target: {fileID: 2737207568106219293, guid: 9c6f51f849e06ab4bacbb18b9dde0436,
+    - target: {fileID: 132316494271921122, guid: 9c6f51f849e06ab4bacbb18b9dde0436,
         type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 300
+      propertyPath: m_text
+      value: '<color=#0000FF>l = Length
+
+        <color=#FF0000>w = Width
+
+        <color=#00FF00>h
+        = Height
+
+        <color=#FFFF00>r = Radius
+
+        <color=#FF00FF>s = Slant
+        Height
+
+        <color=#FF7F00>b = Base (Side Length)
+
+        <color=#00FFFF>a
+        = Apothem Length
+
+        <color=#FFFFFF>\u03c0 = Pi
+
+        ^x = To the
+        power of x
+
+        d = Diagonal'
       objectReference: {fileID: 0}
-    - target: {fileID: 2737207568106219293, guid: 9c6f51f849e06ab4bacbb18b9dde0436,
+    - target: {fileID: 132316494271921122, guid: 9c6f51f849e06ab4bacbb18b9dde0436,
         type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 100
+      propertyPath: m_fontSize
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 132316494271921122, guid: 9c6f51f849e06ab4bacbb18b9dde0436,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 2737207568106219293, guid: 9c6f51f849e06ab4bacbb18b9dde0436,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -400
+      value: -600
       objectReference: {fileID: 0}
     - target: {fileID: 5347247250710901808, guid: 9c6f51f849e06ab4bacbb18b9dde0436,
         type: 3}
       propertyPath: m_Name
       value: InformationPopup Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 5443952903184632292, guid: 9c6f51f849e06ab4bacbb18b9dde0436,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 36
-      objectReference: {fileID: 0}
-    - target: {fileID: 5443952903184632292, guid: 9c6f51f849e06ab4bacbb18b9dde0436,
-        type: 3}
-      propertyPath: m_fontSizeBase
-      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 8671656770261083578, guid: 9c6f51f849e06ab4bacbb18b9dde0436,
         type: 3}
@@ -6515,11 +6534,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 552138061}
-    - target: {fileID: 9063720070727398315, guid: 9c6f51f849e06ab4bacbb18b9dde0436,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CloseInformation
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

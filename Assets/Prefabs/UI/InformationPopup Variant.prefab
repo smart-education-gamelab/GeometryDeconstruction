@@ -8,6 +8,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1776698443083082137, guid: 005f7236f1ddf2b44b1bb8ca4ecfa8b8,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776698443083082137, guid: 005f7236f1ddf2b44b1bb8ca4ecfa8b8,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 36
+      objectReference: {fileID: 0}
     - target: {fileID: 1806482809422648397, guid: 005f7236f1ddf2b44b1bb8ca4ecfa8b8,
         type: 3}
       propertyPath: m_Name
@@ -112,6 +122,58 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5977053677648780191, guid: 005f7236f1ddf2b44b1bb8ca4ecfa8b8,
+        type: 3}
+      propertyPath: m_text
+      value: '<color=#0000FF>l = Length
+
+        <color=#FF0000>w = Width
+
+        <color=#00FF00>h
+        = Height
+
+        <color=#FFFF00>r = Radius
+
+        <color=#FF00FF>s = Slant
+        Height
+
+        <color=#FF7F00>b = Base (Side Length)
+
+        <color=#00FFFF>a
+        = Apothem Length
+
+        <color=#FFFFFF>\u03c0 = Pi
+
+        ^x = To the
+        power of x
+
+        d = Diagonal'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5977053677648780191, guid: 005f7236f1ddf2b44b1bb8ca4ecfa8b8,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 5977053677648780191, guid: 005f7236f1ddf2b44b1bb8ca4ecfa8b8,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 8563687357676078944, guid: 005f7236f1ddf2b44b1bb8ca4ecfa8b8,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 8563687357676078944, guid: 005f7236f1ddf2b44b1bb8ca4ecfa8b8,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8563687357676078944, guid: 005f7236f1ddf2b44b1bb8ca4ecfa8b8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -600
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

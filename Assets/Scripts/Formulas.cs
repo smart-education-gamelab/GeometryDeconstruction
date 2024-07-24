@@ -112,10 +112,10 @@ public static class Formulas
                 formula = "wh";
                 break;
             case Shape2D.Pentagon:
-                formula = "1/2wh5";
+                formula = "1/2ba5";
                 break;
             case Shape2D.Hexagon:
-                formula = "1/2wh6";
+                formula = "1/2ba6";
                 break;
             case Shape2D.LateralSurfaceCylinder:
                 formula = "2πrh";
