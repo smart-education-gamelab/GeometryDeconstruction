@@ -1,4 +1,4 @@
-# Welcome to Geometry Deconstruction Repository
+# Welcome to Geometry Deconstruction
 
 Welcome to the **Geometry Deconstruction Repository**. This repository contains the prototype of an Educational Augmented Reality Game for learning formulas of surface area and volume.
 
