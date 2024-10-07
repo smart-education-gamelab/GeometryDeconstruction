@@ -75,17 +75,20 @@ public class ObjectSelect : MonoBehaviour, IPointerClickHandler
     // Use mouse on PC to select surfaces of objects
     private void OnMouseDown()
     {
-        IsSelected = !IsSelected;
-       if (IsSelected)
-       {
-           materialRenderer.material.color = highlightColor;
-            CheckCorrect();
-        }
-        else
+        if (Application.isEditor)
         {
-            materialRenderer.material.color = originalColor;
-			floatingHint.UpdateText("");
-            IsCorrect = false;
+            IsSelected = !IsSelected;
+            if (IsSelected)
+            {
+                materialRenderer.material.color = highlightColor;
+                CheckCorrect();
+            }
+            else
+            {
+                materialRenderer.material.color = originalColor;
+                floatingHint.UpdateText("");
+                IsCorrect = false;
+            }
         }
     }
 
